@@ -46,13 +46,7 @@ Now use `use` wisely and you're home.
  -/
 Statement
     (a b : ℕ) : a ≤ b → a ≤ (succ b) := by
-  intro h
-  rcases h with ⟨c, hc⟩
-  rw [hc]
-  use c + 1
   sorry
-  --rfl
-
 Conclusion
 "
 

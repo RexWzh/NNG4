@@ -18,10 +18,7 @@ Here's a nice easy one.
 then $x\\le x$. -/
 Statement
     (x : ℕ) : x ≤ x := by
-  use 0
-  rw [add_zero]
-  rfl
-
+  sorry
 Conclusion
 "
 

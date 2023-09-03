@@ -27,15 +27,5 @@ with `add_zero` and `zero_add`).
 /-- For any natural number $m$, we have $ 1 \\cdot m = m$. -/
 Statement one_mul
     (m : ℕ): 1 * m = m := by
-  induction m with d hd
-  · rw [mul_zero]
-    rfl
-  · rw [mul_succ]
-    rw [hd]
-    have := succ_eq_add_one
-    rw [succ_eq_add_one]
-    rfl
-
-LemmaTab "Mul"
-
+  sorry
 Conclusion ""

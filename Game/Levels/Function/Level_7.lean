@@ -24,13 +24,7 @@ make an element of $\\operatorname{Hom}(\\operatorname{Hom}(P,Q),
 \\operatorname{Hom}(\\operatorname{Hom}(Q,F),\\operatorname{Hom}(P,F)))$. -/
 Statement
     (P Q F : Type) : (P → Q) → ((Q → F) → (P → F)) := by
-  intro f
-  intro h
-  intro p
-  apply h
-  apply f
-  exact p
-
+  sorry
 Conclusion
 "
 

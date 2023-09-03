@@ -24,21 +24,7 @@ $\operatorname{succ}(\operatorname{succ}(a))=\operatorname{succ}(\operatorname{s
 then we can deduce $a=b$.  -/
 Statement
     {a b : ℕ} (h : succ (succ a) = succ (succ b)) : a = b := by
-  Branch
-    simp at h
-    exact h
-  Branch
-    exact succ_inj (succ_inj h)
-  apply succ_inj
-  apply succ_inj
-  assumption
-
-TacticDoc assumption "none"
-
-NewTactic assumption -- TODO: just added to satisfy the linter
-LemmaTab "Nat"
-DisabledTactic simp
-
+  sorry
 Conclusion
 "
 ## Sample solutions to this level.

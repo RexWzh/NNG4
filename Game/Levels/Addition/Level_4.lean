@@ -20,30 +20,7 @@ In other words, for all natural numbers $a$ and $b$, we have
 $a + b = b + a$. -/
 Statement MyNat.add_comm
     (a b : ℕ) : a + b = b + a := by
-  Hint (hidden := true) "You might want to start by induction."
-  Branch
-    induction a with d hd
-    · rw [zero_add]
-      rw [add_zero]
-      rfl
-    · rw [succ_add]
-      rw [hd]
-      rw [add_succ]
-      rfl
-  induction b with d hd
-  · rw [zero_add]
-    rw [add_zero]
-    rfl
-  · rw [add_succ]
-    rw [hd]
-    rw [succ_add]
-    rfl
-
--- Adding this instance to make `ac_rfl` work.
-instance : Lean.IsCommutative (α := ℕ) (·+·) := ⟨MyNat.add_comm⟩
-
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 If you got this far -- nice! You're nearly ready to make a choice:

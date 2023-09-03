@@ -37,48 +37,7 @@ attribute [simp] MyNat.succ_add
 $a + b + c = a + c + b$. -/
 Statement MyNat.add_right_comm
     (a b c : ℕ) : a + b + c = a + c + b := by
-  Hint (hidden := true) "You want to change your goal to `a + (b + c) = _`
-  so that you can then use commutativity."
-  Branch
-    induction c
-    · Branch
-        simp
-      rw [add_zero, add_zero]
-      rfl
-    · Branch
-        simp [n_ih]
-      rw [add_succ, n_ih, add_succ, succ_add]
-      rfl
-  rw [add_assoc]
-  Hint "Here you need to be more precise about where to rewrite theorems.
-  `rw [add_comm]` will just find the
-  first `_ + _` it sees and swap it around. You can target more specific
-  additions like this: `rw [add_comm a]` will swap around
-  additions of the form `a + _`, and `rw [add_comm a b]` will only
-  swap additions of the form `a + b`."
-  Branch
-    ac_rfl
-  Branch
-    rw [add_comm]
-    Hint "`rw [add_comm]` just rewrites to first instance of `_ + _` it finds, which
-    is not what you want to do here. Instead you can provide the arguments explicitely:
-
-    * `rw [add_comm b c]`
-    * `rw [add_comm b]`
-    * `rw [add_comm b _]`
-    * `rw [add_comm _ c]`
-
-    would all have worked. You should go back and try again.
-    "
-  rw [add_comm b c]
-  Branch
-    rw [add_assoc]
-    rfl
-  rw [←add_assoc]
-  rfl
-
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 If you have got this far, then you have become very good at

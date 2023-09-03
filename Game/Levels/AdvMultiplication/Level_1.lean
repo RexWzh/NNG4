@@ -32,19 +32,7 @@ out that `_` is supposed to be `3 * x + 2 * y + 1`.
 /-- The product of two non-zero natural numbers is non-zero. -/
 Statement
     (a b : ℕ) : a ≠ 0 → b ≠ 0 → a * b ≠ 0 := by
-  intro ha hb
-  intro hab
-  induction b with b
-  apply hb
-  rfl
-  rw [mul_succ] at hab
-  apply ha
-  induction a with a
-  rfl
-  rw [add_succ] at hab
-  exfalso
-  exact succ_ne_zero _ hab
-
+  sorry
 Conclusion
 "
 

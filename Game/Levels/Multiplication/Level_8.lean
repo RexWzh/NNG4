@@ -20,17 +20,7 @@ to have exactly the right tools to do a job.
 /-- Multiplication is commutative. -/
 Statement MyNat.mul_comm
     (a b : ℕ) : a * b = b * a := by
-  induction b with d hd
-  · rw [zero_mul]
-    rw [mul_zero]
-    rfl
-  · rw [succ_mul]
-    rw [← hd]
-    rw [mul_succ]
-    rfl
-
-LemmaTab "Mul"
-
+  sorry
 Conclusion
 "
 You've now proved that the natural numbers are a commutative semiring!

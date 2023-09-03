@@ -38,47 +38,7 @@ and so it's clear how to make the element of $U$ from the element of $P$.
 Statement
     (P Q R S T U: Type) (p : P) (h : P → Q) (i : Q → R) (j : Q → T) (k : S → T) (l : T → U) :
     U := by
-  Hint "Indeed, we could solve this level in one move by typing
-
-  ```
-  exact l (j (h p))
-  ```
-
-  But let us instead stroll more lazily through the level.
-  We can start by using the `have` tactic to make an element of $Q$:
-
-  ```
-  have q := h p
-  ```
-  "
-  Branch
-    exact l (j (h p))
-  have q := h p
-  Hint "
-  and now we note that $j(q)$ is an element of $T$
-
-  ```
-  have t : T := j q
-  ```
-
-  (notice how we can explicitly tell Lean
-  what set we thought $t$ was in, with that `: T` thing before the `:=`.
-  This is optional unless Lean can not figure it out by itself.)
-  "
-  have t : T := j q
-  Hint "
-  Now we could even define $u$ to be $l(t)$:
-
-  ```
-  have u : U := l t
-  ```
-  "
-  have u : U := l t
-  Hint "…and then finish the level with `exact u`."
-  exact u
-
-NewTactic «have»
-
+  sorry
 Conclusion
 "
 If you solved the level using `have`, then you might have observed

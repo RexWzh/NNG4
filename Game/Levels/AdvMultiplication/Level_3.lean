@@ -17,19 +17,7 @@ Now you have `eq_zero_or_eq_zero_of_mul_eq_zero` this is pretty straightforward.
  -/
 Statement
     {a b : ℕ} : a * b = 0 ↔ a = 0 ∨ b = 0 := by
-  constructor
-  intro h
-  exact eq_zero_or_eq_zero_of_mul_eq_zero a b h
-  intro hab
-  rcases hab with hab | hab
-  rw [hab]
-  rw [MyNat.zero_mul]
-  rfl
-  rw [hab]
-  rw [MyNat.mul_zero]
-  rfl
-
-
+  sorry
 Conclusion
 "
 

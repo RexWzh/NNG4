@@ -27,32 +27,7 @@ $X\\ne Y$ is *defined to mean* $X = Y\\implies{\\tt False}$, similar to how `¬A
 /-- Zero is not the successor of any natural number. -/
 Statement MyNat.succ_ne_zero
     (a : ℕ) : succ a ≠ 0 := by
-  Hint "You have several options how to start. One would be to recall that `≠` is defined as
-  `(· = ·) → False` and start with `intro`. Or do `rw [Ne, Not]` to explicitely remove the
-  `≠`. Or you could use the lemma `Ne.symm (a b : ℕ) : a ≠ b → b ≠ a` which I just added to your
-  inventory."
-  Branch
-    simp?
-  Branch
-    rw [Ne] -- same as `simp` or `rw [ne_eq]`
-    rw[Not]
-    intro h
-    apply zero_ne_succ a
-    Branch
-      apply Eq.symm
-      exact h
-    rw [h]
-    rfl
-  Branch
-    exact (zero_ne_succ a).symm
-  apply Ne.symm
-  exact zero_ne_succ a
-
-
-NewLemma MyNat.zero_ne_succ Ne.symm Eq.symm Iff.symm
-NewDefinition Ne
-LemmaTab "Nat"
-
+  sorry
 Conclusion
 "
 

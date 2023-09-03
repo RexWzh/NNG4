@@ -44,21 +44,6 @@ namespace MyNat
 
 /-- For all natural numbers $a$, we have $\operatorname{succ}(a) = a+1$. -/
 Statement succ_eq_add_one n : succ n = n + 1 := by
-  Hint (hidden := true) "First unravel the `1`."
-  rw [one_eq_succ_zero]
-  Hint (hidden := true) "Now you can `rw [add_succ]`"
-  rw [add_succ]
-  rw [add_zero]
-  rfl
-
-LemmaDoc MyNat.add_succ as "add_succ" in "Add"
-"`add_succ a b` is the proof of `a + succ b = succ (a + b)`."
-
-LemmaDoc MyNat.succ_eq_add_one as "succ_eq_add_one" in "Add"
-"`succ_eq_add_one n` is the proof that `succ n = n + 1`."
-
-NewLemma MyNat.add_succ MyNat.succ_eq_add_one
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "You begin to hear dramatic music. Click next to begin the cutscene."

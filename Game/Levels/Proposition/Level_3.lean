@@ -41,43 +41,7 @@ and so it's clear how to deduce $U$ from $P$.
 Statement
     (P Q R S T U: Prop) (p : P) (h : P → Q) (i : Q → R)
     (j : Q → T) (k : S → T) (l : T → U) : U := by
-  Hint "Indeed, we could solve this level in one move by typing
-
-  ```
-  exact l (j (h p))
-  ```
-
-  But let us instead stroll more lazily through the level.
-  We can start by using the `have` tactic to make a proof of $Q$:
-
-  ```
-  have q := h p
-  ```
-  "
-  have q := h p
-  Hint "
-  and then we note that $j {q}$ is a proof of $T$:
-
-  ```
-  have t : T := j {q}
-  ```
-  "
-  have t := j q
-  Hint "
-  (note how we explicitly told Lean what proposition we thought ${t}$ was
-  a proof of, with that `: T` thing before the `:=`)
-  and we could even define $u$ to be $l {t}$:
-
-  ```
-  have u : U := l {t}
-  ```
-  "
-  have u := l t
-  Hint " and now finish the level with `exact {u}`."
-  exact u
-
-DisabledTactic apply
-
+  sorry
 Conclusion
 "
 If you solved the level using `have`, then click on the last line of your proof

@@ -28,17 +28,7 @@ Can you prove `2 + 1 = 3`?
 
 /-- $2+1=3$. -/
 Statement : (2 : ℕ) + 1 = 3 := by
-  Hint "Which one of Peano's axioms do we ultimately want to use to rewrite that addition?"
-  Hint (hidden := true) "change `1` to `succ 0` with a rewrite, and then
-  think about Peano's axioms."
-  rw [one_eq_succ_zero]
-  rw [add_succ]
-  rw [add_zero]
-  rw [three_eq_succ_two]
-  rfl
-
-
-
+  sorry
 Conclusion
 "
 Are you up for `2 + 2 = 4`?

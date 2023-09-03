@@ -31,10 +31,7 @@ Oh did I mention there was a new tactic? Find it highlighted in your inventory.
 
 /-- $29+35=64$. -/
 Statement : (29 : ℕ) + 35 = 64 := by
-  decide
-
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 The `decide` tactic destroys sub-bosses such as `2 + 2 = 4`.

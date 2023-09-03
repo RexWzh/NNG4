@@ -42,34 +42,7 @@ you cannot rewrite one-way implications, but you can rewrite two-way implication
  -/
 Statement --iff_trans
     (P Q R : Prop) : (P ↔ Q) → (Q ↔ R) → (P ↔ R) := by
-  intro hpq hqr
-  Hint "Make a choice and continue either with `constructor` or `rw`.
-
-  * if you use `constructor`, you will use `{hqr}.1, {hqr}.2, …` later.
-  * if you use `rw`, you can replace all `P`s with `Q`s using `rw [{hpq}]`"
-  Branch
-    rw [hpq]
-    Branch
-      exact hqr
-    rw [hqr]
-    Hint "Now `rfl` can close this goal.
-
-    TODO: Note that the current modification of `rfl` is too weak to prove this. For now, you can
-    use `simp` instead (which calls the \"real\" `rfl` internally)."
-    simp
-  constructor
-  intro p
-  Hint "Now you can directly `apply {hqr}.1`"
-  apply hqr.1
-  apply hpq.1
-  exact p
-  intro r
-  apply hpq.2
-  apply hqr.2
-  exact r
-
-DisabledTactic rcases
-
+  sorry
 Conclusion
 "
 

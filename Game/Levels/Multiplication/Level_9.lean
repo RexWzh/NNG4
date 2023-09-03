@@ -30,22 +30,7 @@ attribute [simp] MyNat.one_mul
 /-- For all natural numbers $a$ $b$ and $c$, we have $a(bc)=b(ac)$. -/
 Statement MyNat.mul_left_comm
     (a b c : ℕ) : a * (b * c) = b * (a * c) := by
-  Branch
-    induction c
-    · simp
-    · simp
-      rw [mul_add, n_ih, mul_add, mul_comm a b]
-      rfl
-  rw [← mul_assoc]
-  rw [mul_comm a]
-  rw [mul_assoc]
-  rfl
-
-LemmaTab "Mul"
-
--- TODO: make simp work:
--- attribute [simp] mul_assoc mul_comm mul_left_comm
-
+  sorry
 Conclusion
 "
 Now we add a lot of the lemmas you proved to the `simp`, so it can do simplifications

@@ -30,25 +30,7 @@ associative. "
 In other words, if $a, b$ and $c$ are arbitrary natural numbers, we have
 $ (a + b) + c = a + (b + c). $ -/
 Statement add_assoc (a b c : ℕ) : (a + b) + c = a + (b + c) := by
-  Hint "Note that when Lean writes `a + b + c`, it means `(a + b) + c`. If it wants to talk
-  about `a + (b + c)` it will put the brackets in explictly."
-  Branch
-    induction a with d hd
-    simp
-    simp [succ_add, hd]
-  Branch
-    induction b with d hd
-    simp
-    simp [succ_add, add_succ, hd]
-  induction c with c hc
-  simp
-  simp [hc, succ_add, add_succ]
-
--- Adding this instance to make `ac_rfl` work.
-instance : Lean.IsAssociative (α := ℕ) (·+·) := ⟨add_assoc⟩
-
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 Congratulations, you just proved that the naturals are an additive commutative monoid!

@@ -20,32 +20,7 @@ over `∨` and `∨` distributes over `∧`. Let's prove one of these.
 $$P\\land(Q\\lor R)\\iff(P\\land Q)\\lor (P\\land R).$$  -/
 Statement --and_or_distrib_left
     (P Q R : Prop) : P ∧ (Q ∨ R) ↔ (P ∧ Q) ∨ (P ∧ R) := by
-  constructor
-  intro h
-  rcases h with ⟨hp, hqr⟩
-  rcases hqr with q | r
-  left
-  constructor
-  exact hp
-  exact q
-  right
-  constructor
-  exact hp
-  exact r
-  intro h
-  rcases h with hpq | hpr
-  rcases hpq with ⟨p, q⟩
-  constructor
-  exact p
-  left
-  exact q
-  rcases hpr with ⟨hp, hr⟩
-  constructor
-  exact hp
-  right
-  exact hr
-
-
+  sorry
 Conclusion
 "
 You already know enough to embark on advanced addition world. But the next two levels comprise

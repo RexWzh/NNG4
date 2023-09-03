@@ -27,21 +27,7 @@ Statement
     (f1 : A → B) (f2 : B → E) (f3 : E → D) (f4 : D → A) (f5 : E → F)
     (f6 : F → C) (f7 : B → C) (f8 : F → G) (f9 : G → J) (f10 : I → J)
     (f11 : J → I) (f12 : I → H) (f13 : E → H) (f14 : H → K) (f15 : I → L) : A → L := by
-  Hint (hidden := true) "You should, once again, start with `intro a`."
-  intro a
-  Hint "Use a mixture of `apply` and `have` calls to find your way through the maze."
-  apply f15
-  apply f11
-  apply f9
-  apply f8
-  apply f5
-  apply f2
-  apply f1
-  exact a
-
--- TODO: Once `cc` is implemented,
--- NewTactic cc
-
+  sorry
 Conclusion
 "
 Now move onto advanced proposition world, where you will see

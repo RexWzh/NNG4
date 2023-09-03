@@ -27,15 +27,7 @@ no theorems at all which mention $1$. Let's prove one now.
 $ \\operatorname{succ}(n) = n+1$ . -/
 Statement MyNat.succ_eq_add_one
     (n : ℕ) : succ n = n + 1 := by
-  rw [one_eq_succ_zero]
-  rw [add_succ]
-  rw [add_zero]
-  rfl
-
-NewLemma MyNat.one_eq_succ_zero
-NewDefinition One
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 Well done! On to the last level!

@@ -53,72 +53,7 @@ to do if you're simplifying. "
 
 /-- For all natural numbers $n$, we have $0 + n = n$. -/
 Statement zero_add (n : ℕ) : 0 + n = n := by
-  Hint "You can start a proof by induction over `n` by typing:
-  `induction n with d hd`."
-  induction n with d hd
-  · Hint "Now you have two goals. Once you proved the first, you will jump to the second one.
-    This first goal is the base case $n = 0$.
-
-    Recall that you can use all lemmas that are visible in your inventory."
-    Hint (hidden := true) "try using `add_zero`."
-    rw [add_zero]
-    rfl
-  · Hint "Now you jumped to the second goal. Here you have the induction hypothesis
-    `{hd} : 0 + {d} = {d}` and you need to prove the statement for `succ {d}`."
-    Hint (hidden := true) "look at `add_succ`."
-    rw [add_succ]
-    Hint (hidden := true) "At this point you see the term `0 + {d}`, so you can use the
-    induction hypothesis with `rw [{hd}]`."
-    rw [hd]
-    rfl
-
-attribute [simp] zero_add
-
-TacticDoc induction "
-## Summary
-
-if `n : MyNat` is in our assumptions, then `induction n with d hd`
-attempts to prove the goal by induction on `n`, with the inductive
-variable in the `succ` case being `d`, and the inductive hypothesis being `hd`.
-
-## Details
-
-If you have a natural number `n : MyNat` in your assumptions
-then `induction n with d hd` turns your
-goal into two goals, a base case with `n = 0` and
-an inductive step where `hd` is a proof of the `n = d`
-case and your goal is the `n = succ d` case.
-
-### Example:
-If this is our local context:
-```
-n : mynat
-⊢ 2 * n = n + n
-```
-
-then
-
-`induction n with d hd`
-
-will give us two goals:
-
-```
-⊢ 2 * 0 = 0 + 0
-```
-
-and
-```
-d : mynat,
-hd : 2 * d = d + d
-⊢ 2 * succ d = succ d + succ d
-```
-
--/
-
-"
-NewTactic induction
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 ## Now venture off on your own for a while.

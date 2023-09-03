@@ -26,13 +26,7 @@ Here are some more facts about `rw`.
 /-- If $a=p$, $b=q$ and $c=r$, then $ab+2c^3+7=pq+2r^3+7.$ -/
 Statement (a b c p q r : ℕ) (hap : a = p) (hbq : b = q) (hcr : c = r) :
     a * b + 2 * b * c ^ 3 + 7 = p * q + 2 * q * r ^ 3 + 7 := by
-  Hint "Switch to editor mode if you want to experiment with `rw` more easily.
-        Note that each tactic needs to start at the beginning of a line."
-  rw [hap, hbq, hcr]
-  Hint "If you didn't already, try going to editor mode, proving this
-  theorem with `rw [hap, hbq, hcr]` and then clicking around the commas"
-  rfl
-
+  sorry
 Conclusion
 "
 In editor mode, you can click around the proof and see the state of Lean's brain at

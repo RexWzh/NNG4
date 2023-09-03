@@ -16,25 +16,7 @@ strategy.
 
 /-- $1+1=2$. -/
 Statement : (1 : ℕ) + 1 = 2 := by
-  Hint "Go ahead and start with `rw [one_eq_succ_zero]`. Do you see what it does?"
-  Branch
-    rw [one_eq_succ_zero]
-    Hint "It has rewritten both of the `1`s. Finish the goal from here
-    and you'll notice that you have to rewrite another one later: rewriting that first `1`
-    is a step in the wrong direction. Count the number of rewrites. Now go into editor
-    mode and change `rw [one_eq_succ_zero]` to `nth_rewrite 2 [one_eq_succ_zero].
-    This tells Lean to only change the second `1` into a `succ 0`."
-  nth_rewrite 2 [one_eq_succ_zero]
-  Hint "With this revised opening you should be able to solve the level in
-    three more rewrites rather than four more."
-  rw [add_succ]
-  rw [add_zero]
-  rw [two_eq_succ_one]
-  Hint "Nice! Nearly there."
-  rfl
-
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 Are you now up for the first sub-boss `2 + 2 = 4`?

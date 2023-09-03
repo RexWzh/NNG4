@@ -17,19 +17,7 @@ that $n\\not=\\operatorname{succ}(n)$.
 $$ n \\neq \\operatorname{succ}(n). $$ -/
 Statement --ne_succ_self
      (n : ℕ) : n ≠ succ n := by
-  Hint (hidden := true) "I would start a proof by induction on `n`."
-  induction n with d hd
-  · apply zero_ne_succ
-  · Hint (hidden := true) "If you have no clue, you could start with `rw [Ne, Not]`."
-    Branch
-      rw [Ne, Not]
-    intro hs
-    apply hd
-    apply succ_inj
-    exact hs
-
-LemmaTab "Nat"
-
+  sorry
 Conclusion
 "
 Congratulations. You've completed Advanced Addition World and can move on

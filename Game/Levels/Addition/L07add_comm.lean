@@ -22,20 +22,7 @@ LemmaDoc MyNat.add_comm as "add_comm" in "Add"
 In other words, if `a` and `b` are arbitrary natural numbers, then
 $a + b = b + a$. -/
 Statement add_comm (a b : ℕ) : a + b = b + a := by
-  Hint (hidden := true) "Induction on `a` or `b` -- it's all the same in this one."
-  Branch
-    induction a with d hd
-    · simp
-    · simp [succ_add, add_succ, hd]
-  induction b with d hd
-  · simp
-  · simp_all [succ_add, add_succ]
-
--- Adding this instance to make `ac_rfl` work.
-instance : Lean.IsCommutative (α := ℕ) (·+·) := ⟨add_comm⟩
-
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 If you got this far -- nice! There is one more lemma which you will need

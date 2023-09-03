@@ -27,16 +27,7 @@ LemmaDoc MyNat.add_left_comm as "add_left_comm" in "Add"
 /-- If $a, b$ and $c$ are arbitrary natural numbers, we have
 $a + (b + c) = b + (a + c)$. -/
 Statement add_left_comm (a b c : ℕ) : a + (b + c) = b + (a + c) := by
-  Hint "Don't use induction; `add_assoc` and `add_comm` are all the tools you need.
-    Remember that to rewrite `h : X = Y` backwards (i.e. to change `Y`s to `X`s
-    rather than `X`s to `Y`s) use `rw [←h]`"
-  Hint (hidden := true) "Remember that you can do more targetted rewrites by
-  adding explicit variables to theorems. For example `rw [add_comm b]` will only
-  do rewrites of the form `b + ? = ? + b`."
-  rw [←add_assoc, add_comm a, add_assoc]
-  rfl
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 If you have got this far, then you have become very good at

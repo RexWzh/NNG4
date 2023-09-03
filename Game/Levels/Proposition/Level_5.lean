@@ -26,33 +26,7 @@ this seems like a bit of a tall order. But let's give it a go.
 $P\\implies(Q\\implies P)$. -/
 Statement
     (P Q : Prop) : P → (Q → P) := by
-  Hint "Our goal is `P → X` for some true/false statement $X$, and if our
-  goal is to construct an implication then we almost always want to use the
-  `intro` tactic from level 2, Lean's version of \"assume $P$\", or more precisely
-  \"assume $p$ is a proof of $P$\". So let's start with
-
-  ```
-  intro p
-  ```
-  "
-  intro p
-  Hint "We now have a proof $p$ of $P$ and we are supposed to be constructing
-  a proof of $Q\\implies P$. So let's assume that $Q$ is true and try
-  and prove that $P$ is true. We assume $Q$ like this:
-
-  ```
-  intro q
-  ```
-  "
-  intro q
-  Hint "Now we have to prove $P$, but have a proof handy:
-
-  ```
-  exact {p}
-  ```
-  "
-  exact p
-
+  sorry
 Conclusion
 "
 A mathematician would treat the proposition $P\\implies(Q\\implies P)$

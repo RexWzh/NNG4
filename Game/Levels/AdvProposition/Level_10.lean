@@ -22,29 +22,7 @@ $$(\\lnot Q\\implies \\lnot P)\\implies(P\\implies Q).$$
  -/
 Statement
     (P Q : Prop) : (¬ Q → ¬ P) → (P → Q) := by
-  Hint "For example, you could start as always with
-
-  ```
-  intro h p
-  ```
-  "
-  intro h p
-  Hint "From here there is no way to continue with the tactics you've learned so far.
-
-  Instead you can call `by_cases q : Q`. This creates **two goals**, once under the assumption
-  that `Q` is true, once assuming `Q` is false."
-  by_cases q : Q
-  Hint "This first case is trivial."
-  exact q
-  Hint "The second case needs a bit more work, but you can get there with the tactics you've already
-  learned beforehand!"
-  have j := h q
-  exfalso
-  apply j
-  exact p
-
-NewTactic by_cases
-
+  sorry
 Conclusion
 "
 This approach assumed that `P ∨ ¬ P` is true, which is called \"law of excluded middle\".

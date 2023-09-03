@@ -17,30 +17,7 @@ directions) using the `constructor` tactic, which is how you're going to have to
  -/
 Statement
     (a b : ℕ) : succ a = succ b ↔ a = b := by
-  Branch
-    simp
-  constructor
-  Hint "Now you have two goals. The first is exactly `succ_inj` so you can close
-  it with
-
-  ```
-  exact succ_inj
-  ```
-  "
-  · exact succ_inj
-  · Hint "The second one you could solve by looking up the name of the theorem
-    you proved in the last level and doing `exact <that name>`, or alternatively
-    you could get some more `intro` practice and seeing if you can prove it
-    using `intro`, `rw` and `rfl`."
-    Branch
-      exact succ_eq_succ_of_eq
-    intro h
-    rw [h]
-    rfl
-
-LemmaTab "Nat"
-DisabledTactic simp
-
+  sorry
 Conclusion
 "
 

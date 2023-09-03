@@ -36,24 +36,7 @@ For all natural numbers $a, b$, we have
 $ \operatorname{succ}(a) + b = \operatorname{succ}(a + b)$.
 -/
 Statement succ_add (a b : ℕ) : succ a + b = succ (a + b)  := by
-  Hint (hidden := true) "You might want to think about whether induction
-  on `a` or `b` is the best idea."
-  Branch
-    induction a with d hd
-    Hint "Induction on `a` will not work. Addition is defined by recursion
-    on the second variable, so you need to do induction on the second
-    variable in the additions"
-  induction b with d hd
-  · Hint (hidden := true) "Instead of two rewrites and a `rfl` can you find a
-    tactic which proves `succ a + 0 = succ (a + 0)` immediately?"
-    simp
-  · Hint (hidden := true) "You can solve this goal in one line with a high-powered tactic"
-    Hint (hidden := true) "It's `simp` but you'll need to feed `simp` the right list of
-    lemmas to use..."
-    simp [add_succ, hd]
-
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 

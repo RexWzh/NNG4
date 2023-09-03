@@ -22,11 +22,7 @@ macro_rules | `(tactic| ac_rfl) => `(tactic| simp only [add_assoc, add_left_comm
 $(d + f) + (h + (a + c)) + (g + e + b) = a + b + c + d + e + f + g + h$. -/
 Statement (a b c d e f g h : ℕ) :
     (d + f) + (h + (a + c)) + (g + e + b) = a + b + c + d + e + f + g + h := by
-  ac_rfl
-
-NewTactic ac_rfl
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 Congratulations! You finished addition world. Now go back to the overworld by clicking the

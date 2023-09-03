@@ -39,37 +39,7 @@ axiom TMP.add_comm (a b : ℕ) : a + b = b + a
  -/
 Statement --one_add_le_self
     (x : ℕ) : x ≤ 1 + x := by
-  Hint "
-  The goal below is to prove $x\\le 1+x$ for any natural number $x$.
-  First let's turn the goal explicitly into an existence problem with
-  `rw [le_iff_exists_add]`."
-  rw [MyNat.le_iff_exists_add]
-  Hint "
-  Clearly this statement now is true,
-  and the proof is that $c=1$ will work (we also
-  need the fact that addition is commutative, but we proved that a long
-  time ago). How do we make progress with this goal?
-
-  The `use` tactic can be used on goals of the form `∃ c, ...`. The idea
-  is that we choose which natural number we want to use, and then we use it.
-  So try `use 1`."
-  use 1
-  Hint "
-    and now you can solve this by
-  `exact add_comm 1 x`.
-  "
-  -- -- TODO: Implement `ring`
-  -- , or if you are lazy you can just use the `ring` tactic,
-  -- which is a powerful AI which will solve any equality in algebra which can
-  -- be proved using the standard rules of addition and multiplication. Now
-  -- look at your proof. We're going to remove a line.
-  rw [TMP.add_comm]
-  rfl
-
-NewTactic use -- ring
-NewLemma MyNat.le_iff_exists_add
-LemmaTab "Inequality"
-
+  sorry
 Conclusion "Now look at your proof. We're going to remove a line.
 
 ## Important

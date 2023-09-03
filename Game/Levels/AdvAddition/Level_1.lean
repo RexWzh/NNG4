@@ -24,23 +24,7 @@ succ_inj (a b : ℕ) :
 then we can deduce $a=b$. -/
 Statement -- MyNat.succ_inj'
     {a b : ℕ} (hs : succ a = succ b) :  a = b := by
-  Hint "You should know a couple
-  of ways to prove the below -- one directly using an `exact`,
-  and one which uses an `apply` first. But either way you'll need to use `succ_inj`."
-  Branch
-    apply succ_inj
-    exact hs
-  Branch
-    -- NOTE: a version of `simp_inj` is always part of the `simp` set
-    -- as `succ.injEq : (succ a = succ b) = (a = b)` cannot be removed.
-    simp? at hs
-    exact hs
-  exact succ_inj hs
-
-NewLemma MyNat.succ_inj
-LemmaTab "Nat"
-DisabledTactic simp
-
+  sorry
 Conclusion
 "
 **Important thing**:

@@ -19,17 +19,7 @@ $$ a + b = a, $$
 then $b = 0$. -/
 Statement MyNat.eq_zero_of_add_right_eq_self
     {a b : ℕ} : a + b = a → b = 0 := by
-  intro h
-  Hint (hidden := true) "Look at `add_left_cancel`."
-  apply add_left_cancel a
-  rw [h]
-  rw [add_zero]
-  rfl
-
-LemmaTab "Add"
--- Note: if you find a way to use `simp`, honestly go for it :)
-
-
+  sorry
 Conclusion
 "
 

@@ -23,11 +23,7 @@ but sometimes the other way is also convenient.
 $$ d+1 = \\operatorname{succ}(d). $$ -/
 Statement MyNat.add_one_eq_succ
     (d : ℕ) : d + 1 = succ d := by
-  rw [succ_eq_add_one]
-  rfl
-
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 

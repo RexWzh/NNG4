@@ -29,25 +29,7 @@ The Lean tactic for \"let $x\\in X$ be arbitrary\" is `intro x`.
 /-- We define a function from ℕ to ℕ. -/
 Statement
     : ℕ → ℕ := by
-  Hint "To solve this goal,
-  you have to come up with a function from `ℕ`
-  to `ℕ`. Start with
-
-  `intro n`"
-  intro n
-  Hint "Our job now is to construct a natural number, which is
-  allowed to depend on ${n}$. We can do this using `exact` and
-  writing a formula for the function we want to define. For example
-  we imported addition and multiplication at the top of this file,
-  so
-
-  `exact 3 * {n} + 2`
-
-  will close the goal, ultimately defining the function $f({n})=3{n}+2$."
-  exact 3 * n + 2
-
-NewTactic intro
-
+  sorry
 Conclusion
 "
 ## Rule of thumb:

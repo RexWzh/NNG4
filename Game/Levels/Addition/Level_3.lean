@@ -31,22 +31,7 @@ what the variables are\".
 $ \operatorname{succ}(a) + b = \operatorname{succ}(a + b)$. -/
 Statement MyNat.succ_add
     (a b : ℕ) : succ a + b = succ (a + b)  := by
-  Hint (hidden := true) "You might again want to start by induction
-  on the right-most variable."
-  Branch
-    induction a
-    Hint "Induction on `a` will not work."
-  induction b with d hd
-  · rw [add_zero]
-    rw [add_zero]
-    rfl
-  · rw [add_succ]
-    rw [hd]
-    rw [add_succ]
-    rfl
-
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 

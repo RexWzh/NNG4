@@ -59,38 +59,7 @@ $ ab = ac, $
 then $b = c$. -/
 Statement MyNat.mul_left_cancel
     (a b c : ℕ) (ha : a ≠ 0) : a * b = a * c → b = c := by
-  Hint "NOTE: As is, this level is probably too hard and contains no hints yet.
-  Good luck!
-
-  Your first step should be `revert b`!"
-  revert b
-  induction c with c hc
-  · intro b hb
-    rw [mul_zero] at hb
-    rcases eq_zero_or_eq_zero_of_mul_eq_zero _ _ hb
-    exfalso
-    apply ha
-    exact h
-    exact h
-  · intro b h
-    induction b with b hb
-    exfalso
-    apply ha
-    rw [mul_zero] at h
-    rcases eq_zero_or_eq_zero_of_mul_eq_zero _ _ h.symm with h | h
-    exact h
-    exfalso
-    exact succ_ne_zero _ h
-    rw [mul_succ, mul_succ] at h
-    have j : b = c
-    apply hc
-    exact add_right_cancel _ _ _ h
-    rw [j]
-    rfl
--- TODO: generalizing b.
-
-NewTactic revert
-
+  sorry
 Conclusion
 "
 

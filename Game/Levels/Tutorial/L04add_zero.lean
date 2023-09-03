@@ -46,46 +46,7 @@ namespace MyNat
 
 /-- $a+(0+0)+(0+0+0)=a.$ -/
 Statement (a : ℕ) : (a + (0 + 0)) + (0 + 0 + 0) = a := by
-  Hint "I will walk you through this level so I can show you some
-  techniques which will speed up your proving.
-
-  This is an annoying goal. One of `rw [add_zero a]` and `rw [add_zero 0]`
-  will work, but not the other. Can you figure out which? Try the one
-  that works."
-  Branch
-    rw [add_zero 0]
-    Hint "Walkthrough: Now `rw [add_zero a]` will work, so try that next."
-    rw [add_zero a]
-    Hint "OK this is getting old really quickly. And if we end up with more complex
-    goals and have to type weird stuff like `rw [add_zero (a + 0)]` it will be
-    even worse.
-
-    Fortunately `rw` can do smart rewriting. Go back to the very start
-    of this proof by clicking \"Delete\" to remove all the moves you've
-    made so far and then try `rw [add_zero]` few times. Then delete all of
-    these and try `repeat rw [add_zero]`.
-    "
-  repeat rw [add_zero]
-  Hint "`rw [add_zero]` will change `? + 0` into `?`
-    where `?` is arbitrary; `rw` will use the
-    first solution which matches for `?`."
-  rfl
-
-LemmaDoc MyNat.add_zero as "add_zero" in "Add"
-"`add_zero n` is a proof that `n + 0 = n`.
-
-This is one of the two axioms for addition."
-
-DefinitionDoc Add as "+" "`Add a b`, with notation `a + b`, is
-the usual sum of natural numbers. Internally it is defined by
-induction on one of the variables, but that is an implementation issue;
-All you need to know is that `add_zero` and `zero_add` are both theorems."
-
-NewLemma MyNat.add_zero
-NewTactic «repeat» -- TODO: Do we want it to be unlocked here?
-NewDefinition Add
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 Let's now learn about Peano's second axiom for addition, `add_succ`.

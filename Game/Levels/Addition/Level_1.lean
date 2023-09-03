@@ -36,33 +36,7 @@ The names of the proofs tell you what the theorems are. Anyway, let's prove `0 +
 /-- For all natural numbers $n$, we have $0 + n = n$. -/
 Statement MyNat.zero_add
     (n : ℕ) : 0 + n = n := by
-  Hint "You can start a proof by induction over `n` by typing:
-  `induction n with d hd`.
-
-  If you use the `with` part, you can name your variable and induction hypothesis, otherwise
-  they get default names."
-  induction n with n hn
-  · Hint "Now you have two goals. Once you proved the first, you will jump to the second one.
-    This first goal is the base case $n = 0$.
-
-    Recall that you can use all lemmas that are visible in your inventory."
-    Hint (hidden := true) "try using `add_zero`."
-    rw [add_zero]
-    rfl
-  · Hint "Now you jumped to the second goal. Here you have the induction hypothesis
-    `{hn} : 0 + {n} = {n}` and you need to prove the statement for `succ {n}`."
-    Hint (hidden := true) "look at `add_succ`."
-    rw [add_succ]
-    Branch
-      simp? -- TODO
-    Hint (hidden := true) "At this point you see the term `0 + {n}`, so you can use the
-    induction hypothesis with `rw [{hn}]`."
-    rw [hn]
-    rfl
-
-NewTactic induction
-LemmaTab "Add"
-
+  sorry
 Conclusion
 "
 ## Now venture off on your own.

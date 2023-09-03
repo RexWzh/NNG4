@@ -30,23 +30,7 @@ but only when you've beaten the boss.
 $$(a+b)^2=a^2+b^2+2ab.$$ -/
 Statement MyNat.add_squared
   (a b : ℕ) : (a + b) ^ 2 = a ^ 2 + b ^ 2 + 2 * a * b := by
-  Branch
-    simp? [two_eq_succ_one]
-  rw [two_eq_succ_one]
-  rw [one_eq_succ_zero]
-  repeat rw [pow_succ]
-  repeat rw [pow_zero]
-  --ring
-  repeat rw [one_mul]
-  rw [add_mul, mul_add, mul_add, mul_comm b a]
-  rw [succ_mul, succ_mul, zero_mul, zero_add, add_mul]
-  repeat rw [add_assoc]
-  rw [add_comm _ (b * b), ← add_assoc _ (b*b), add_comm _ (b*b), add_assoc]
-  rfl
-
-NewLemma MyNat.two_eq_succ_one
-LemmaTab "Pow"
-
+  sorry
 Conclusion
 "
 
